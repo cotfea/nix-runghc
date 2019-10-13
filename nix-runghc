@@ -131,9 +131,9 @@ else
     # Decide on --command option to pass to `nix-shell`
     if ((VERBOSITY > 0)); then
         __echo_blue_light "Found packages:$HASKELL_DEPS"
-        COMMAND="ghc-pkg list; sed '/^!#/d' $1 | runghc --ghc-arg=-XPackageImports; exit"
+        COMMAND="ghc-pkg list; sed '/^!#/d' $1 | runghc --ghc-arg=-XPackageImports $@; exit"
     else
-        COMMAND="sed '/^!#/d' $1 | runghc --ghc-arg=-XPackageImports; exit"
+        COMMAND="sed '/^!#/d' $1 | runghc --ghc-arg=-XPackageImports $@; exit"
     fi
 
     eval "nix-shell \
