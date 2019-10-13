@@ -7,7 +7,7 @@ A tiny, Haskell-specific wrapper for the [`nix-shell` script interpreter][nix-sh
 Put the script on your `$PATH`:
 
 ```bash
-$ curl https://raw.githubusercontent.com/jmackie/nix-runghc/master/nix-runghc > SOME_PATH_DIRECTORY/nix-runghc
+$ curl https://raw.githubusercontent.com/cotfea/nix-runghc/master/nix-runghc > SOME_PATH_DIRECTORY/nix-runghc
 ```
 
 ### Example
